@@ -128,3 +128,13 @@ class Spider:
             print(thread_name + ' has ' + str(max_page-page) + 'pages left')
             page += 1
         return items_list
+
+    @staticmethod
+    def add_link_to_queue(link):                    # 添加一个链接的集合
+        if link in Spider.list_link:
+            pass
+        if Spider.list_domain not in link:          # 如果不是标准的list则不加入
+            pass
+        else:
+            Spider.list_link.add(link)
+            
