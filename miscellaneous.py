@@ -2,6 +2,7 @@ import pymysql
 
 
 def upload_data(data):
+    # 与数据库建立连接，传输中文字符需要指定字符集为utf8
     connect = pymysql.connect(host='localhost', port=3306, user='root', db='jd_data', charset='utf8')
     try:
         for item in data['item-list']:
